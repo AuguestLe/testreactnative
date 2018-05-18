@@ -36,6 +36,11 @@ export default class List extends Component {
         })
         goBack(null);
     }
+    callBackName=(name)=>{
+        this.setState({
+            userName:name
+        })
+    }
 	render () {
         const {navigate,goBack} = this.props.navigation;
 		return (
@@ -52,6 +57,7 @@ export default class List extends Component {
                         navigate('Name',
                             {
                                 userName:this.state.userName,
+                                callBackName:(name)=>this.callBackName(name)
                             }
                         )
                     }}

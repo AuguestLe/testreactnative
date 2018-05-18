@@ -51,14 +51,6 @@ const App = StackNavigator(
                     borderBottomColor:'#f5f5f5',
                     borderBottomWidth:1
                 },
-                headerRight:(
-                    <TouchableOpacity onPress={()=>{
-                        console.log(navigation)
-                        //navigation.goBack();
-                    }}>
-                        <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
-                    </TouchableOpacity>
-                ),
                 headerLeft:(  
                     <View>
                         <TouchableOpacity 
@@ -71,7 +63,15 @@ const App = StackNavigator(
                             <Text style={{color:'#3385ff',fontSize:16,paddingLeft:6}}>首页</Text>
                         </TouchableOpacity> 
                     </View>   
-                )
+                ),
+                headerRight:(
+                    <TouchableOpacity onPress={()=>{
+                        navigation.state.params.navigatePress()
+                        navigation.goBack();
+                    }}>
+                        <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
+                    </TouchableOpacity>
+                ),
             }) 
         },
         Sex: {
@@ -90,13 +90,13 @@ const App = StackNavigator(
                     borderBottomColor:'#f5f5f5',
                     borderBottomWidth:1
                 },
-                headerRight:(
-                    <TouchableOpacity onPress={()=>{
-                        navigation.goBack();
-                    }}>
-                        <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
-                    </TouchableOpacity>
-                ),
+                // headerRight:(
+                //     <TouchableOpacity onPress={()=>{
+                //         navigation.goBack();
+                //     }}>
+                //         <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
+                //     </TouchableOpacity>
+                // ),
                 headerLeft:(  
                     <View>
                         <TouchableOpacity 
@@ -128,13 +128,13 @@ const App = StackNavigator(
                     borderBottomColor:'#f5f5f5',
                     borderBottomWidth:1
                 },
-                headerRight:(
-                    <TouchableOpacity onPress={()=>{
-                        navigation.goBack();
-                    }}>
-                        <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
-                    </TouchableOpacity>
-                ),
+                // headerRight:(
+                //     <TouchableOpacity onPress={()=>{
+                //         navigation.goBack();
+                //     }}>
+                //         <Text style={{color:'#3385ff',fontSize:16,paddingRight:10}}>保存</Text>
+                //     </TouchableOpacity>
+                // ),
                 headerLeft:(  
                     <View>
                         <TouchableOpacity 
